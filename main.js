@@ -156,6 +156,11 @@ let outputLogic = () => {
 }
 
 
+
+
+
+
+// Count button color changes.
 let countbutton = () => {
   if (output.value == "") {
     count.style.background = "red"
