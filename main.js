@@ -12,11 +12,12 @@ let display = document.querySelector("#display")
 btn.addEventListener("click", () => {
 
   if (input.value == "") {
-    input.style.border = "2px solid red"
+    input.style.border = "2px solid yellow"
   }
 
   else {
     show()
+    outputLogic()
   }
 
 
@@ -110,9 +111,8 @@ btn2.addEventListener("click", () => {
 
     setTimeout(() => {
 
-      btn2.innerHTML = "Copy Code"
+      btn2.innerHTML = "Copy"
       btn2.style.background = "transparent"
-      btn2.style.color = "black"
     }, 2000)
 
 
@@ -122,6 +122,10 @@ btn2.addEventListener("click", () => {
 
     // Reset Count.
     count.innerHTML = "0"
+
+    // input & output border remove.
+    input.style.border = "none"
+    output.style.border = "none"
 
     // copy text to clipboard.
 
@@ -133,10 +137,18 @@ btn2.addEventListener("click", () => {
 
     setTimeout(() => {
 
-      btn2.innerHTML = "Copy Code"
+      btn2.innerHTML = "Copy"
       btn2.style.background = "transparent"
-      btn2.style.color = "black"
       output.value = ""
     }, 2000)
   }
 })
+
+
+
+// if we have content in output box.
+let outputLogic = () => {
+  if (output.value != "") {
+    output.style.border = "2px solid #2ecc71"
+  }
+}
