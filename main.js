@@ -1,7 +1,7 @@
 let input = document.querySelector("#input")
 let output = document.querySelector("#output")
 let btn = document.querySelector("#btn")
-let copy = document.querySelector("#copy")
+let btn2 = document.querySelector("#copy")
 let display = document.querySelector("#display")
 
 
@@ -11,7 +11,15 @@ let display = document.querySelector("#display")
 
 btn.addEventListener("click", () => {
 
-  show()
+  if (input.value == "") {
+    input.style.border = "2px solid red"
+  }
+
+  else {
+    show()
+  }
+
+
 })
 
 
@@ -58,8 +66,61 @@ let show = () => {
 
   const uniqueStrings = Array.from(new Set(removeExtras));
 
-  console.log(uniqueStrings);
 
+
+  // Display all your filtered array of strings in output box.
+
+  uniqueStrings.forEach((every) => {
+
+
+    let c = `<blockquote class="mycard">${every}</blockquote>`
+
+    output.value += c
+  })
+
+
+
+  // copy code Button function.
+
+  btn2.addEventListener("click", () => {
+
+    if (output.value == "") {
+
+
+      btn2.innerHTML = `<i class="fa-solid fa-circle-xmark"></i>`
+      btn2.style.background = "red"
+      btn2.style.color = "white"
+
+      setTimeout(() => {
+
+        btn2.innerHTML = "Copy Code"
+        btn2.style.background = "transparent"
+        btn2.style.color = "black"
+      }, 2000)
+
+
+    }
+
+    else {
+      navigator.clipboard.writeText(output.value)
+
+      btn2.innerHTML = `<i class="fa-solid fa-check"></i>`
+      btn2.style.background = "green"
+      btn2.style.color = "white"
+
+      setTimeout(() => {
+
+        btn2.innerHTML = "Copy Code"
+        btn2.style.background = "transparent"
+        btn2.style.color = "black"
+        output.value = ""
+      }, 2000)
+    }
+  })
+
+
+  // Added Numbeeer of Shayaries we have :
+  count.innerHTML = uniqueStrings.length
 
 
 
