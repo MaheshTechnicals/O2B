@@ -79,46 +79,6 @@ let show = () => {
   })
 
 
-
-  // copy code Button function.
-
-  btn2.addEventListener("click", () => {
-
-    if (output.value == "") {
-
-
-      btn2.innerHTML = `<i class="fa-solid fa-circle-xmark"></i>`
-      btn2.style.background = "red"
-      btn2.style.color = "white"
-
-      setTimeout(() => {
-
-        btn2.innerHTML = "Copy Code"
-        btn2.style.background = "transparent"
-        btn2.style.color = "black"
-      }, 2000)
-
-
-    }
-
-    else {
-      navigator.clipboard.writeText(output.value)
-
-      btn2.innerHTML = `<i class="fa-solid fa-check"></i>`
-      btn2.style.background = "green"
-      btn2.style.color = "white"
-
-      setTimeout(() => {
-
-        btn2.innerHTML = "Copy Code"
-        btn2.style.background = "transparent"
-        btn2.style.color = "black"
-        output.value = ""
-      }, 2000)
-    }
-  })
-
-
   // Added Numbeeer of Shayaries we have :
   count.innerHTML = uniqueStrings.length
 
@@ -128,3 +88,49 @@ let show = () => {
 
 
 }
+
+
+
+
+
+
+
+
+
+// copy code Button activity..
+
+btn2.addEventListener("click", () => {
+
+  if (output.value == "") {
+
+    console.log("hi")
+    btn2.innerHTML = `<i class="fa-solid fa-circle-xmark"></i>`
+    btn2.style.background = "red"
+    btn2.style.color = "white"
+
+    setTimeout(() => {
+
+      btn2.innerHTML = "Copy Code"
+      btn2.style.background = "transparent"
+      btn2.style.color = "black"
+    }, 2000)
+
+
+  }
+
+  else {
+    navigator.clipboard.writeText(output.value)
+
+    btn2.innerHTML = `<i class="fa-solid fa-check"></i>`
+    btn2.style.background = "green"
+    btn2.style.color = "white"
+
+    setTimeout(() => {
+
+      btn2.innerHTML = "Copy Code"
+      btn2.style.background = "transparent"
+      btn2.style.color = "black"
+      output.value = ""
+    }, 2000)
+  }
+})
