@@ -18,6 +18,7 @@ btn.addEventListener("click", () => {
   else {
     show()
     outputLogic()
+    countbutton()
   }
 
 
@@ -140,6 +141,7 @@ btn2.addEventListener("click", () => {
       btn2.innerHTML = "Copy"
       btn2.style.background = "transparent"
       output.value = ""
+      count.style.background = "red"
     }, 2000)
   }
 })
@@ -150,5 +152,15 @@ btn2.addEventListener("click", () => {
 let outputLogic = () => {
   if (output.value != "") {
     output.style.border = "2px solid #2ecc71"
+  }
+}
+
+
+let countbutton = () => {
+  if (output.value == "") {
+    count.style.background = "red"
+  }
+  else {
+    count.style.background = "#2ecc71"
   }
 }
