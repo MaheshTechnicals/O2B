@@ -42,9 +42,23 @@ let show = () => {
   })
 
 
-  // Remove That strings which don't have "."" or "!".
+  // Remove That strings which don't have "."" or "!" or "।".
 
 
+  const removeExtras = arr1.filter(str => {
+    const lastChar = str.slice(-1);
+    return lastChar === "." || lastChar === "!" || lastChar === "|" || lastChar === "।";
+  });
+
+
+
+
+
+  // Remove Duplicate Strings From above array.
+
+  const uniqueStrings = Array.from(new Set(removeExtras));
+
+  console.log(uniqueStrings);
 
 
 
