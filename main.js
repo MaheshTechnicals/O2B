@@ -84,7 +84,7 @@ let show = () => {
 
 
 
-
+  input.value = null
 
 
 }
@@ -119,6 +119,12 @@ btn2.addEventListener("click", () => {
   }
 
   else {
+
+    // Reset Count.
+    count.innerHTML = "0"
+
+    // copy text to clipboard.
+
     navigator.clipboard.writeText(output.value)
 
     btn2.innerHTML = `<i class="fa-solid fa-check"></i>`
