@@ -84,7 +84,8 @@ let show = () => {
   // Added Numbeeer of Shayaries we have :
   count.innerHTML = uniqueStrings.length
 
-
+  // Remove data from display after genrate.
+  display.innerHTML = null
 
   input.value = null
 
