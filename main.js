@@ -57,7 +57,7 @@ let show = () => {
 
   const removeExtras = arr1.filter(str => {
     const lastChar = str.slice(-1);
-    return lastChar === "." || lastChar === "!" || lastChar === "|" || lastChar === "।";
+    return lastChar === "." || lastChar === "!" || lastChar === "|" || lastChar === "।" || lastChar === `"`;
   });
 
 
