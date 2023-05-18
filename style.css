@@ -52,8 +52,9 @@ h1 {
 }
 
 label {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   color: white;
+  text-transform: uppercase;
 }
 
 #count {
