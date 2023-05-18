@@ -47,7 +47,7 @@ let show = () => {
 
   lilist.forEach((each) => {
 
-    arr1.push(each.innerHTML)
+    arr1.push(each.innerText)
 
   })
 
