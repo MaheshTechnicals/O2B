@@ -118,7 +118,8 @@ btn2.addEventListener("click", () => {
     setTimeout(() => {
 
       btn2.innerHTML = "Copy"
-      btn2.style.background = "transparent"
+      btn2.style.background = "white"
+      btn2.style.color = "black"
     }, 2000)
 
 
@@ -145,7 +146,8 @@ btn2.addEventListener("click", () => {
     setTimeout(() => {
 
       btn2.innerHTML = "Copy"
-      btn2.style.background = "transparent"
+      btn2.style.background = "white"
+      btn2.style.color = "black"
       output.value = ""
       count.style.background = "red"
     }, 2000)
