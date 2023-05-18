@@ -4,6 +4,7 @@ let btn = document.querySelector("#btn")
 let btn2 = document.querySelector("#copy")
 let display = document.querySelector("#display")
 
+count.style.display = "none"
 
 
 
@@ -90,6 +91,9 @@ let show = () => {
   input.value = null
 
 
+  count.style.display = ""
+
+
 }
 
 
@@ -136,6 +140,7 @@ btn2.addEventListener("click", () => {
     btn2.innerHTML = `<i class="fa-solid fa-check"></i>`
     btn2.style.background = "green"
     btn2.style.color = "white"
+    count.style.display = "none"
 
     setTimeout(() => {
 
