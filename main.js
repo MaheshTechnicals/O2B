@@ -38,7 +38,7 @@ let show = () => {
 
 
   // Select All Li.
-  let lilist = document.querySelectorAll("li")
+  let lilist = document.querySelectorAll("p")
 
 
   // Create One Array For store all li strings.
